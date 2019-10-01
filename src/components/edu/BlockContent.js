@@ -22,8 +22,8 @@ export default function BlockContent(props) {
           </>
         }
       </div>
-      <p className="pl-4 p2">{obj.discript}</p>
-      <p className="pl-4 p2">{obj.features}</p>
+      <p className="p2 px-4">{obj.discript}</p>
+      <p className="p2 px-4">{obj.features}</p>
     </div>
   );
 }
