@@ -14,7 +14,7 @@ export default function Contact() {
       </div>
       <div className="d-flex align-items-center p-2 pl-4">
         <i className="fas fa-envelope royal-blue"></i>
-        <div className="text-capitalize pl-4 basic-text">thachdong270293@gmail.com</div>
+        <div className="pl-4 basic-text">thachdong270293@gmail.com</div>
       </div>
       <div className="d-flex align-items-center p-2 pl-4">
         <i className="fas fa-phone royal-blue"></i>
