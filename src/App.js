@@ -5,6 +5,7 @@ import Info from './components/infos/Info';
 import Edu from './components/edu/Edu';
 import Exp from './components/Exp';
 import MyGoals from './components/MyGoals';
+import Footer from './components/Footer';
 
 export default class App extends Component {
 
@@ -79,6 +80,9 @@ export default class App extends Component {
             <Exp projects={project} />
             <Edu edu={edu} />
           </div>
+        </div>
+        <div className="row">
+          <Footer />
         </div>
       </div>
     )

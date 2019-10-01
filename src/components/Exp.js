@@ -15,8 +15,8 @@ export default function Exp(props) {
           Work Experience
         </div>
       </div>
-      <p className="pl-4">
-        I have no experience work at company job. I am just learning web programming about 4 months. After 4 months, i have basic knowledge about Javascript, ES6, ReactJS, HTML, CSS, Bootstrap . Base on knowledge gained, I have done 2 project, which deployed to netlify as below. 
+      <p className="pl-4 pb-0">
+        I have no experience work at company job. I am just learning web programming about 4 months. After 4 months, i have basic knowledge about Javascript, ES6, ReactJS, HTML, CSS, Bootstrap, Git. Base on knowledge gained, I have done 2 project, which deployed to netlify as below. 
       </p>
       {projectList}
     </div>

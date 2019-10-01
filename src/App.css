@@ -47,3 +47,10 @@ body {
 .contact {
   border-bottom: 1px solid #eee;
 }
+
+.footer {
+  background-color: #339688;
+  text-align: center;
+  color: #fff;
+  padding: 1rem 0;
+}
