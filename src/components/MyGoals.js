@@ -9,7 +9,7 @@ export default function MyGoals() {
           My Goals
         </div>
       </div>
-      <p className="px-4 p2">
+      <p className="pl-4 pr-3 p2">
         In rest of life, i want to become a frontend dev (backend dev will be fine). In next 6 months i will try to get reconize as fresher frontend dev. Beside, i have plan to come back school for second degree.
       </p>
     </div>
