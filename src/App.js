@@ -21,50 +21,33 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // get skill data
-    db.collection("skill")
-    .get()
-    .then(querySnapshot => {
-      const data = querySnapshot.docs.map(doc => doc.data());
-      this.setState(
-        () => {
-          return {skills: data}
-        }
+    function getData(collection) {
+      return (
+        db.collection(collection)
+          .get()
       );
-    });
-    // get language data
-    db.collection("language")
-    .get()
-    .then(querySnapshot => {
-      const data = querySnapshot.docs.map(doc => doc.data());
-      this.setState(
-        () => {
-          return {languages: data}
-        }
-      );
-    });
-    // get edu data
-    db.collection("education")
-    .get()
-    .then(querySnapshot => {
-      const data = querySnapshot.docs.map(doc => doc.data());
-      this.setState(
-        () => {
-          return {edu: data}
-        }
-      );
-    });
-    // get project data
-    db.collection("project")
-    .get()
-    .then(querySnapshot => {
-      const data = querySnapshot.docs.map(doc => doc.data());
-      this.setState(
-        () => {
-          return {project: data}
-        }
-      );
-    });
+    }
+
+    getData("skill")
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({skills: data});
+        return getData("language");
+      })
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({languages: data});
+        return getData("education");
+      })
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({edu: data});
+        return getData("project");
+      })
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({project: data});
+      });
   }
 
   render() {
