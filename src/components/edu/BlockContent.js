@@ -4,7 +4,7 @@ export default function BlockContent(props) {
   const {obj} = props;
   return (
     <div className="border-bottom">
-      <div className="text-capitalize pt-4 pl-4 basic-text basic-heading">
+      <div className="text-capitalize pt-3 pl-4 basic-text basic-heading">
         {obj.name}
       </div>
       <div className="d-flex align-items-center p-2 pl-4">

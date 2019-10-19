@@ -16,7 +16,8 @@ export default class App extends Component {
       skills: [],
       languages: [],
       edu: [],
-      project: []
+      project: [],
+      knowledge: []
     }
   }
 
@@ -47,20 +48,25 @@ export default class App extends Component {
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
         this.setState({project: data});
+        return getData("knowledge");
+      })
+      .then(querySnapshot => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({knowledge: data});
       });
   }
 
   render() {
-    const {skills, languages, edu, project } = this.state;
+    const {skills, languages, edu, project, knowledge } = this.state;
     return (
       <div className="container-fluid">
         <div className="row p-2">
           <div className="col-sm-4 p-2 bg-transparent">
             <Info skills={skills} languages={languages} />
           </div>
-          <div className="col-sm-8 p-2 bg-transparent">
+          <div className="col-sm-8 p-2 pb-0 bg-transparent">
             <MyGoals />
-            <Exp projects={project} />
+            <Exp projects={project} knowledge={knowledge} />
             <Edu edu={edu} />
           </div>
         </div>

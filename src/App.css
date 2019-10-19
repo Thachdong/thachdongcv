@@ -54,3 +54,7 @@ body {
   color: #fff;
   padding: 1rem 0;
 }
+
+.knowledge-table {
+  width: 40% !important;
+}
