@@ -67,7 +67,7 @@ export default class App extends Component {
           <div className="col-sm-8 p-2 pb-0 bg-transparent">
             <MyGoals />
             <Exp projects={project} knowledge={knowledge} />
-            <Edu edu={edu} />
+            <Edu edu={edu} knowledge={knowledge}/>
           </div>
         </div>
         <div className="row">
